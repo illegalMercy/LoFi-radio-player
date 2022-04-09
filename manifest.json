@@ -1,0 +1,34 @@
+{
+
+    "manifest_version": 2,
+    "name": "Lofi Radio Player",
+    "version": "1.0",
+  
+    "description": "Listen to your favorite lo-fi radio",
+    
+    "icons": {
+        "16": "img/icon16.svg",
+        "48": "img/icon48.svg",
+        "128": "img/icon128.svg"
+      },
+
+    "browser_action": {
+      "default_popup": "index.html",
+      "browser_style": true
+    },
+
+    "background": {
+        "page": "background.html"
+    },
+
+    "permissions": [
+    ],
+
+    "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"]
+      }
+    ]
+    
+  }
+  

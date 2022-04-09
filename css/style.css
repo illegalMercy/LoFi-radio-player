@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 191px;
+    min-width: 300px;
+    background-color: #4F7A69;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.player {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    padding-bottom: 35px;
+    
+    box-shadow: 0 10px 4px #181f2e ;
+}
+
+.frame {
+    position: absolute;
+    transform: translateY(5px);
+    z-index: 2;
+}
+
+.wheels img:first-child{
+    margin-right: 5px;
+    rotate: 45deg;
+}
+
+
+.wheels img {
+    position: relative;
+    z-index: 1;
+}
+.player.play .wheels img {
+    animation-play-state: running;
+    animation: rotate 6s linear infinite;
+    animation-play-state:running;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.button-play {
+    background: none;
+    border: 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
